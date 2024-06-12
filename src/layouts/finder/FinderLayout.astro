@@ -4,9 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import Header from "../layouts/Header.astro";
-import Footer from "./Footer.astro";
-import Hero from "./Hero.astro";
+import Alert from "../finder/Alert.astro";
+import Navbar from "../finder/Navbar.astro";
 ---
 
 <!doctype html>
@@ -18,7 +17,6 @@ import Hero from "./Hero.astro";
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
 
-  <Header title={title} />
   <body>
     <slot />
     <style is:global>
@@ -50,6 +48,5 @@ import Hero from "./Hero.astro";
           monospace;
       }
     </style>
-    <Footer />
   </body>
 </html>
